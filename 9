@@ -1,0 +1,20 @@
+def contar_vocales(palabra):
+    """
+    Esta función toma una palabra y cuenta cuántas letras "a", "e", "i", "o" y "u" tiene.
+    :param palabra: La palabra a evaluar.
+    :return: Un diccionario con el conteo de cada vocal.
+    """
+    vocales = "aeiou"
+    conteo = {vocal: 0 for vocal in vocales}
+    for letra in palabra.lower():
+        if letra in vocales:
+            conteo[letra] += 1
+    
+    return conteo
+# Solicitar al usuario que ingrese una palabra
+palabra = input("Introduce una palabra: ")
+# Contar las vocales en la palabra
+resultado = contar_vocales(palabra)
+# Mostrar el resultado
+for vocal, cantidad in resultado.items():
+    print(f"La vocal '{vocal}' aparece {cantidad} veces en la palabra '{palabra}'.")
