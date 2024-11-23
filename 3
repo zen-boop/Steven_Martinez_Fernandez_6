@@ -1,0 +1,14 @@
+def filtrar_palabras(lista, n):
+    """
+    Esta función toma una lista de palabras y un entero n, y devuelve las palabras que tienen más de n caracteres.
+    :param lista: Lista de palabras.
+    :param n: Número entero que representa el número mínimo de caracteres.
+    :return: Lista de palabras que tienen más de n caracteres.
+    """
+    palabras_filtradas = [palabra for palabra in lista if len(palabra) > n]
+    return palabras_filtradas
+# Ejemplo de uso
+palabras = input("Introduce una lista de palabras separadas por comas: ").split(',')
+n = int(input("Introduce un número entero: "))
+resultado = filtrar_palabras(palabras, n)
+print(f"Las palabras con más de {n} caracteres son: {resultado}")
