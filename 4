@@ -1,0 +1,17 @@
+def contar_mayusculas(cadena):
+    """
+    Esta función toma una cadena y devuelve el número de letras mayúsculas que contiene.
+    :param cadena: La cadena a evaluar.
+    :return: El número de letras mayúsculas en la cadena.
+    """
+    contador = 0
+    for caracter in cadena:
+        if caracter.isupper():
+            contador += 1
+    return contador
+# Solicitar al usuario que ingrese una cadena
+cadena = input("Introduce una cadena: ")
+# Contar el número de letras mayúsculas en la cadena
+numero_mayusculas = contar_mayusculas(cadena)
+# Mostrar el resultado
+print(f"La cadena contiene {numero_mayusculas} letras mayúsculas.")
