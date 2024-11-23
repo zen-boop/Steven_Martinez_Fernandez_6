@@ -1,0 +1,21 @@
+def contar_mayores_de_20(edades):
+    """
+    Esta función toma una tupla de edades y devuelve la cantidad de personas con edades superiores a 20.
+    :param edades: Tupla de edades.
+    :return: Cantidad de personas con edades superiores a 20.
+    """
+    contador = 0
+    for edad in edades:
+        if edad > 20:
+            contador += 1
+    return contador
+# Pedir edades al usuario
+edades = []
+for i in range(10):
+    edad = int(input(f"Introduce la edad de la persona {i+1}: "))
+    edades.append(edad)
+# Convertir la lista a tupla
+edades = tuple(edades)
+# Contar y mostrar la cantidad de personas con edades superiores a 20
+cantidad_mayores_de_20 = contar_mayores_de_20(edades)
+print(f"La cantidad de personas con edades superiores a 20 es: {cantidad_mayores_de_20}")
