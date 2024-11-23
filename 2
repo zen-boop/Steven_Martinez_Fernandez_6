@@ -1,0 +1,15 @@
+def mas_larga(lista):
+    """
+    Esta función toma una lista de palabras y devuelve la palabra más larga.
+    :param lista: Lista de palabras.
+    :return: La palabra más larga en la lista.
+    """
+    palabra_mas_larga = ""
+    for palabra in lista:
+        if len(palabra) > len(palabra_mas_larga):
+            palabra_mas_larga = palabra
+    return palabra_mas_larga
+# Ejemplo de uso
+palabras = input("Introduce una lista de palabras separadas por comas: ").split(',')
+palabra_larga = mas_larga(palabras)
+print(f"La palabra más larga es: {palabra_larga}")
