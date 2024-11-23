@@ -1,0 +1,16 @@
+def binario_a_entero(binario):
+    """
+    Esta función toma una cadena que representa un número binario y la convierte en un número entero.
+    :param binario: Cadena que representa un número binario.
+    :return: Número entero correspondiente al binario.
+    """
+    entero = 0
+    longitud = len(binario)
+    for i in range(longitud):
+        digito = int(binario[longitud - i - 1])
+        entero += digito * (2 ** i)
+    return entero
+# Ejemplo de uso
+binario = input("Introduce un número binario: ")
+entero = binario_a_entero(binario)
+print(f"El número entero correspondiente es: {entero}")
