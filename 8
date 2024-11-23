@@ -1,0 +1,18 @@
+def contar_nombres_con_letra(nombres, letra):
+    """
+    Esta función toma una lista de nombres y una letra, y devuelve la cantidad de nombres que comienzan con esa letra.
+    :param nombres: Lista de nombres.
+    :param letra: Letra a buscar.
+    :return: Cantidad de nombres que comienzan con la letra.
+    """
+    contador = 0
+    for nombre in nombres:
+        if nombre.lower().startswith(letra.lower()):
+            contador += 1
+    return contador
+# Pedir datos al usuario
+nombres = input("Introduce una lista de nombres separados por comas: ").split(',')
+letra = input("Introduce la letra a buscar: ")
+# Contar y mostrar la cantidad de nombres que comienzan con la letra
+cantidad = contar_nombres_con_letra(nombres, letra)
+print(f"La cantidad de nombres que comienzan con '{letra}' es: {cantidad}")
