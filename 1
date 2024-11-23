@@ -1,0 +1,16 @@
+def max_in_list(lista):
+    """
+    Esta función toma una lista de números y devuelve el más grande de ellos.
+    :param lista: Lista de números.
+    :return: El número más grande en la lista.
+    """
+    maximo = lista[0]
+    for numero in lista:
+        if numero > maximo:
+            maximo = numero
+    return maximo
+# Ejemplo de uso
+numeros=input("Introduce una lista de números separados por comas: ").split(',')
+numeros=[float(numero) for numero in numeros]
+mayor = max_in_list(numeros)
+print(f"El número más grande en la lista es: {mayor}")
