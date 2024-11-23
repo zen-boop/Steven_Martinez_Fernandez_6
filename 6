@@ -1,0 +1,20 @@
+def calcular_edad(ano_actual, ano_nacimiento):
+    """
+    Esta función calcula la edad que cumplirá una persona en el año actual.
+    :param ano_actual: Año en curso.
+    :param ano_nacimiento: Año de nacimiento de la persona.
+    :return: Edad que cumplirá la persona en el año actual.
+    """
+    return ano_actual - ano_nacimiento
+# Solicitar el año en curso
+ano_actual = int(input("Introduce el año en curso: "))
+# Solicitar el nombre y año de nacimiento de tres personas
+personas = []
+for i in range(3):
+    nombre = input(f"Introduce el nombre de la persona {i+1}: ")
+    ano_nacimiento = int(input(f"Introduce el año de nacimiento de {nombre}: "))
+    personas.append((nombre, ano_nacimiento))
+# Calcular y mostrar la edad que cumplirán durante el año en curso
+for nombre, ano_nacimiento in personas:
+    edad = calcular_edad(ano_actual, ano_nacimiento)
+    print(f"{nombre} cumplirá {edad} años en {ano_actual}.")
